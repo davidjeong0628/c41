@@ -85,7 +85,7 @@ function advancedWalk() {
   let rootElement = document.querySelector(":root");
   let tree = advancedWalkHelper(rootElement, 1);
 
-  let textarea = document.querySelector("#advancedTraversalNodeInfo");
+  let textarea = document.querySelector("#advancedTraversalTextarea");
   textarea.textContent = tree;
 }
 
