@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
+    <meta charset="UTF-8">
     <title>Vanilla DOM Manipulation Exercises</title>
     <style media="screen">
       :root {
@@ -17,6 +17,10 @@
         --darkcolor4: darkgoldenrod;
         --darkcolor5: darkred;
         --darkcolor6: darkmagenta;
+
+        --cards-width: 50%;
+        --cards-border: 1px solid black;
+        --cards-margin-bottom: 1dvh;
       }
 
       label {
@@ -103,8 +107,9 @@
       }
 
       .cards {
-        border: 1px solid black;
-        width: 50%;
+        border: var(--cards-border);
+        width: var(--cards-width);
+        margin-bottom: var(--cards-margin-bottom);
       }
     </style>
   </head>
@@ -118,7 +123,7 @@
         <fieldset>
           <legend>Traversal</legend>
           <label for="walkBtn">Basic Traversal</label>
-          <input type="button" id="walkBtn" value="Walk" />
+          <input type="button" id="walkBtn" value="Walk">
 
           <label for="traversalResultTextarea">Basic Traversal Result</label>
           <textarea
@@ -127,7 +132,7 @@
           ></textarea>
 
           <label for="advancedWalkBtn">Advanced Traversal</label>
-          <input type="button" id="advancedWalkBtn" value="Advanced Walk" />
+          <input type="button" id="advancedWalkBtn" value="Advanced Walk">
 
           <label for="advancedTraversalTextarea"
             >Advanced Traversal Result</label
@@ -141,10 +146,10 @@
         <fieldset>
           <legend>Modify</legend>
           <label for="modifyBtn">Simple Modification</label>
-          <input type="button" id="modifyBtn" value="Modify" />
+          <input type="button" id="modifyBtn" value="Modify">
 
           <label for="advancedModifyBtn">Advanced Modify</label>
-          <input type="button" id="advancedModifyBtn" value="Advanced Modify" />
+          <input type="button" id="advancedModifyBtn" value="Advanced Modify">
         </fieldset>
 
         <fieldset>
@@ -152,7 +157,7 @@
 
           <h3>Basic</h3>
           <label for="addBtn">Basic Addition</label>
-          <input type="button" id="addBtn" value="Add" />
+          <input type="button" id="addBtn" value="Add">
 
           <h3>Advanced</h3>
           <label for="elementTypeSelect">Element Type</label>
@@ -169,26 +174,26 @@
           <input type="text" id="elementContentInput" name="elementContent">
 
           <label for="advancedAddBtn">Advanced Addition</label>
-          <input type="button" id="advancedAddBtn" value="Add" />
+          <input type="button" id="advancedAddBtn" value="Add">
 
           <output
             id="addOutput"
             for="elementTypeSelect tagNameInput elementContentInput advancedAddBtn"
-          >Select and add elements to see their output!<br></output>
+            >Select and add elements to see their output!<br></output>
         </fieldset>
 
         <fieldset>
           <legend>Remove</legend>
           <label for="removeBtn">Simple Delete</label>
-          <input type="button" id="removeBtn" value="Remove" />
+          <input type="button" id="removeBtn" value="Remove">
 
           <label for="safeRemoveBtn">Safe Delete</label>
-          <input type="button" id="safeRemoveBtn" value="Safe Remove" />
+          <input type="button" id="safeRemoveBtn" value="Safe Remove">
 
           <label for="selectorRemoveInput">Selector Input</label>
-          <input type="text" id="selectorRemoveInput" />
+          <input type="text" id="selectorRemoveInput">
           <label for="selectorRemoveBtn">Selector Delete</label>
-          <input type="button" id="selectorRemoveBtn" value="Selector Remove" />
+          <input type="button" id="selectorRemoveBtn" value="Selector Remove">
         </fieldset>
 
         <fieldset>
@@ -201,15 +206,15 @@
 
         -->
           <label for="basicCloneBtn">Basic Clone</label>
-          <input type="button" id="basicCloneBtn" value="Basic Clone" />
+          <input type="button" id="basicCloneBtn" value="Basic Clone">
 
           <label for="advancedCloneBtn">Advanced Clone</label>
-          <input type="button" id="advancedCloneBtn" value="Advanced Clone" />
+          <input type="button" id="advancedCloneBtn" value="Advanced Clone">
         </fieldset>
       </form>
     </section>
 
-    <hr />
+    <hr>
     <h2>
       Look out below these will get deleted if you press the buttons above!
     </h2>
@@ -218,10 +223,11 @@
       Me too. Oh noes, here comes the <code>removeChild()</code> method, it's
       going to delete us!
     </p>
+
     <template id="cardTemplate">
       <section class="cards">
         <h2></h2>
-        <img />
+        <img>
         <p></p>
         <a></a>
       </section>

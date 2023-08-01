@@ -227,7 +227,7 @@ function selectorRemove() {
   let selectorInput = document.querySelector("#selectorRemoveInput");
   let selector = selectorInput.value;
 
-  let nodesToDelete = document.querySelectorAll(selector);
+  let nodesToDelete = Array.from(document.querySelectorAll(selector));
   nodesToDelete.forEach((node) => {
     node.remove();
   });
@@ -236,8 +236,10 @@ function selectorRemove() {
 function basicClone() {
   let elemToClone = document.querySelector("#p1");
   let clonedElem = elemToClone.cloneNode(true);
+
   let newId = `p${Math.floor(Math.random() * 1000000)}`;
   clonedElem.id = newId;
+
   elemToClone.insertAdjacentElement("afterend", clonedElem);
 }
 
@@ -268,6 +270,7 @@ function advancedClone() {
   let link = clone.querySelector("a");
   link.href = "https://www.google.com";
   link.textContent = "Google Home Page";
+  link.target = "_blank";
 
   document.body.appendChild(clone);
 }
