@@ -138,7 +138,8 @@ function advancedModify() {
   let el = document.querySelector("h1");
   el.textContent = "DOM Manipulation is Fun!";
 
-  let newColor = `var(--darkcolor${Math.floor(Math.random() * 6 + 1)})`;
+  let randomNumber = Math.floor(Math.random() * 6 + 1);
+  let newColor = `var(--darkcolor${randomNumber})`;
   el.style.color = newColor;
 
   el = document.querySelector("#p1");
