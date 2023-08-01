@@ -1,5 +1,3 @@
-/* dom.js */
-
 function init() {
   let element = document.getElementById("walkBtn");
   element.addEventListener("click", function () {
@@ -59,24 +57,28 @@ function init() {
 
 function walk() {
   let el;
+  let result = "";
 
   el = document.getElementById("p1");
-  showNode(el);
+  result += showNode(el);
 
   el = el.firstChild;
-  showNode(el);
+  result += showNode(el);
 
   el = el.nextSibling;
-  showNode(el);
+  result += showNode(el);
 
   el = el.lastChild;
-  showNode(el);
+  result += showNode(el);
 
   el = el.parentNode.parentNode.parentNode;
-  showNode(el);
+  result += showNode(el);
 
   el = el.querySelector("section > *");
-  showNode(el);
+  result += showNode(el);
+
+  let textarea = document.getElementById("traversalResultTextarea");
+  textarea.textContent = result;
 }
 
 function advancedWalk() {
@@ -107,8 +109,7 @@ function showNode(el) {
   let nodeName = el.nodeName;
   let nodeValue = el.nodeValue;
 
-  let textarea = document.getElementById("nodeInfo");
-  textarea.innerHTML += `Node type: ${nodeType}\nNode name: ${nodeName}\nNode value: ${nodeValue}\n\n`;
+  return `Node type: ${nodeType}\nNode name: ${nodeName}\nNode value: ${nodeValue}\n\n`;
 }
 
 function modify() {

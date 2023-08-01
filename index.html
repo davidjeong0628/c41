@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
+    <meta charset="UTF-8">
     <title>Vanilla DOM Manipulation Exercises</title>
     <style media="screen">
       :root {
@@ -108,7 +108,6 @@
     </style>
   </head>
   <body>
-    <!-- start of HTML demo -->
     <h1>Vanilla DOM Manipulation</h1>
     <p id="p1">This is a <em>test</em> of the DOM</p>
 
@@ -120,8 +119,8 @@
           <label for="walkBtn">Basic Traversal</label>
           <input type="button" id="walkBtn" value="Walk" />
 
-          <label for="nodeInfo">Basic Traversal Result</label>
-          <textarea id="nodeInfo" name="nodeInfo"></textarea>
+          <label for="traversalResultTextarea">Basic Traversal Result</label>
+          <textarea id="traversalResultTextarea" name="traversalResult"></textarea>
 
           <label for="advancedWalkBtn">Advanced Traversal</label>
           <input type="button" id="advancedWalkBtn" value="Advanced Walk" />
@@ -133,15 +132,7 @@
             id="advancedTraversalNodeInfo"
             name="advancedTraversalNodeInfo"
           ></textarea>
-
-          <!--
-            Q1a) Modify the simple walk button example to not use alerts but instead to print out the node information on the page in a <textarea> within this fieldset. Using appropriate spacing or returns, so we can see each step
-
-            Q1b) Add a new button "Advanced Walk" that does the following:
-                Walks the entire tree starting at the root and spits out the node structure into the <textarea> in the fieldset.  You should indent each level by 4 spaces or you may use -- and other characters like | to make a little tree in the textarea tag.  This is your choice.  Advanced students may create elements on the page and make a sophisticated, but be forewarned if  you are casual about this you may create an infinite traversal.  If you do this more advanced approach you should consider a DocumentFragment to build up the tree and then add it to the DOM all at once.
-
-                Hint: This walk can be done in at least two ways if not more. Doing a brute force traversal may not be the most direct way of doing things.  Looking over more advanced DOM discussions at MDN may reveal other approaches.
-        --></fieldset>
+        </fieldset>
 
         <fieldset>
           <legend>Modify</legend>
